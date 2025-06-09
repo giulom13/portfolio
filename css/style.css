@@ -1,5 +1,5 @@
 body {
-  background: #ffffff;
+  background: #eaeaea;
   color: #050a06;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -67,7 +67,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #eaeaea;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px;
   width: 120px;
@@ -103,7 +103,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 460px;
-  background: #f3f3f3;
+  background: #ffffff;
   color: #050a06;
   border-radius: 12px;
   padding: 20px;
@@ -118,10 +118,12 @@ h2 {
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #ffffff;
   border-radius: 8px;
   margin-bottom: 15px;
-  height: auto;
 }
 
 .card h3 {
@@ -219,21 +221,24 @@ button:disabled {
 
 #popup {
   position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #224228;
-  color: #ffffff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  bottom: 30px;
+  right: 30px;
+  background: #5bd78f;
+  color: #050a06;
+  padding: 16px 24px;
+  border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  z-index: 999;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
 }
 
 #popup.show {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 form {
@@ -283,44 +288,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #db5842;
-}
-
-.spinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #ffffff;
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  display: inline-block;
-  animation: spin 1s linear infinite;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#popup {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #5bd78f;
-  color: #050a06;
-  padding: 16px 24px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  z-index: 9999;
-}
-
-#popup.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
 }
