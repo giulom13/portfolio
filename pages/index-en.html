@@ -23,16 +23,13 @@
     <meta property="og:url" content="https://tusitio.com" />
   </head>
   <body>
-    <header>
-      <div class="container" style="position: relative">
-        <div class="language-switch">
-          <a href="../index.html" title="Español">🇪🇸</a>
-          <a href="index-en.html" title="English">🇬🇧</a>
-        </div>
-        <h1>Giulianno Magistocchi</h1>
-        <p>Web Developer | WordPress · HTML · CSS · JS</p>
+    <header class="hero-header">
+      <div class="language-switch">
+        <a href="../index.html" title="Español">🇪🇸</a>
+        <a href="index-en.html" title="English">🇬🇧</a>
       </div>
     </header>
+
 
     <section class="about">
       <div class="container">
@@ -134,21 +131,42 @@
       </div>
     </section>
 
-    <section class="contacto">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Would you like to work with me or have a question?</p>
-        <a href="mailto:giulom13dev@gmail.com">giulom13dev@gmail.com</a><br />
-        <a href="../assets/cv-giulianno-magistocchi.pdf" download class="btn-cv"
-          >📄 Download CV</a
-        >
-      </div>
-    </section>
+<section class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>¿Querés trabajar conmigo o tenés alguna consulta?</p>
+
+    <form id="contact-form" action="https://formspree.io/f/xwpblqpv" method="POST">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="service">Servicio</label>
+      <select id="service" name="service" required>
+        <option value="">Seleccioná una opción</option>
+        <option value="web">Diseño Web</option>
+        <option value="apps">Aplicaciones</option>
+        <option value="other">Otro</option>
+      </select>
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" id="submit-btn">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<div id="popup">Gracias por tu consulta. Nos comunicaremos lo antes posible.</div>
 
     <footer>
       <div class="container">
         <p>© 2025 Giulianno Magistocchi. All rights reserved.</p>
       </div>
     </footer>
+    <script src="js/form.js"></script>
+
   </body>
 </html>
