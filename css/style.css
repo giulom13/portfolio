@@ -289,3 +289,51 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #db5842;
 }
+
+.util-links {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  color: #224228;
+}
+
+.util-links h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #224228;
+}
+
+.links-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.links-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #224228;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links-icons a:hover {
+  color: #db5842;
+  transform: scale(1.05);
+}
+
+.links-icons img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  transition: filter 0.3s ease;
+  filter: invert(20%) sepia(10%) saturate(800%) hue-rotate(90deg); /* Verde aproximado */
+}
+
+.links-icons a:hover img {
+  filter: invert(41%) sepia(76%) saturate(467%) hue-rotate(341deg) brightness(95%) contrast(90%);
+  /* Aproxima al naranja (#db5842) */
+}
